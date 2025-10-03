@@ -23,8 +23,14 @@
         <item>com.google.sensor.touch_gesture</item> <!-- OPENED -->
       </string-array>
 
-    <!-- The display cutout configs for secondary built-in display. -->
-    <string name="config_secondaryBuiltInDisplayCutout" translatable="false">M 0,0 H -11.23809523809524 V 32.38095238095238 H 11.23809523809524 V 0 H 0 Z @dp</string>
+    <string name="config_mainBuiltInDisplayCutout">M 0,0 H -11.83333333333333 V 31.33333333333333 H 11.83333333333333 V 0 H 0 Z @dp</string>
+    <string name="config_subBuiltInDisplayCutout">\@bottom @right M 0,0 H -173.6470588235294 V -31.05882352941176 H 0 V 0 Z @dp</string>
+	<!-- Indicate whether to allow the device to suspend when the screen is off
+         due to the proximity sensor.  This resource should only be set to true
+         if the sensor HAL correctly handles the proximity sensor as a wake-up source.
+         Otherwise, the device may fail to wake out of suspend reliably.
+         The default is false. -->
+     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
 
     <!-- Minimum screen brightness setting allowed by power manager.
          -2 is invalid so setting will resort to int value specified above.
