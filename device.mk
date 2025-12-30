@@ -34,6 +34,10 @@ PRODUCT_PACKAGES += \
     SystemUIResB5q \
     WifiResTargetB5q
 
+# Touch features
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch-service.samsung-b5q
+
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
     firmware_wlanmdsp.otaupdate_symlink \
