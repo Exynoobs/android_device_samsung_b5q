@@ -14,9 +14,12 @@
  */
 
 // For GloveMode, HighTouchPollingRate and StylusMode
-#define TSP_CMD_LIST_NODE "/sys/class/sec/tsp/cmd_list"
-#define TSP_CMD_RESULT_NODE "/sys/class/sec/tsp/cmd_result"
-#define TSP_CMD_NODE "/sys/class/sec/tsp/cmd"
+#define TSP1_CMD_LIST_NODE "/sys/class/sec/tsp1/cmd_list"
+#define TSP1_CMD_RESULT_NODE "/sys/class/sec/tsp1/cmd_result"
+#define TSP1_CMD_NODE "/sys/class/sec/tsp1/cmd"
+#define TSP2_CMD_LIST_NODE "/sys/class/sec/tsp2/cmd_list"
+#define TSP2_CMD_RESULT_NODE "/sys/class/sec/tsp2/cmd_result"
+#define TSP2_CMD_NODE "/sys/class/sec/tsp2/cmd"
 
 // For KeyDisabler
 #define KEY_DISABLER_NODE "/sys/class/sec/sec_touchkey/input/enabled"

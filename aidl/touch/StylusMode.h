@@ -6,7 +6,7 @@
 #pragma once
 
 #include <aidl/vendor/lineage/touch/BnStylusMode.h>
-#include <samsung_touch.h>
+#include "samsung_touch.h"
 
 namespace aidl {
 namespace vendor {

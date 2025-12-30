@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define LOG_TAG "vendor.lineage.touch-service.samsung"
+#define LOG_TAG "vendor.lineage.touch-service.samsung-q5q"
 
 #include "GloveMode.h"
 #include "HighTouchPollingRate.h"

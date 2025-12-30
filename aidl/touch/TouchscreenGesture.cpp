@@ -28,18 +28,28 @@ const std::pair<int32_t, TouchscreenGesture::GestureInfo> TouchscreenGesture::kS
 int32_t count = 0;
 
 bool TouchscreenGesture::isSupported() {
-    std::ifstream file(TSP_CMD_LIST_NODE);
-    if (file.is_open()) {
+    std::ifstream file1(TSP1_CMD_LIST_NODE);
+    if (file1.is_open()) {
         std::string line;
-        while (getline(file, line)) {
+        while (getline(file1, line)) {
             if (!line.compare("singletap_enable")) {
                 mIsTspCmdSupported = true;
                 break;
             }
         }
-        file.close();
+        file1.close();
     }
-
+    std::ifstream file2(TSP2_CMD_LIST_NODE);
+    if (file2.is_open()) {
+        std::string line;
+        while (getline(file2, line)) {
+            if (!line.compare("singletap_enable")) {
+                mIsTspCmdSupported = true;
+                break;
+            }
+        }
+        file2.close();
+    }
     return mHasEpenGestureNode || mIsTspCmdSupported;
 }
 
@@ -62,21 +72,30 @@ ndk::ScopedAStatus TouchscreenGesture::getSupportedGestures(std::vector<Gesture>
 
 ndk::ScopedAStatus TouchscreenGesture::setGestureEnabled(const Gesture& gesture, bool enabled) {
     if (mIsTspCmdSupported && (gesture.id == count)) {
-        std::fstream file(TSP_CMD_NODE);
-        file << "singletap_enable," << (enabled ? "1" : "0");
+        std::fstream file1(TSP1_CMD_NODE);
+        file1 << "singletap_enable," << (enabled ? "1" : "0");
+        file1.close();
+        std::fstream file2(TSP2_CMD_NODE);
+        file2 << "singletap_enable," << (enabled ? "1" : "0");
+        file2.close();
     } else {
-        std::fstream file(EPEN_GESTURE_NODE);
+        std::fstream file1(EPEN_GESTURE_NODE);
+        std::fstream file2(EPEN_GESTURE_NODE);
         int gestureMode;
         int mask = 1 << gesture.id;
 
-        file >> gestureMode;
+        file1 >> gestureMode;
+        file2 >> gestureMode;
 
         if (enabled)
             gestureMode |= mask;
         else
             gestureMode &= ~mask;
 
-        file << gestureMode;
+        file1 << gestureMode;
+        file1.close();
+        file2 << gestureMode;
+        file2.close();
     }
 
     return ndk::ScopedAStatus::ok();

@@ -1,6 +1,8 @@
 on early-init
-    chown system radio /sys/class/sec/tsp/cmd
-    chmod 0664 /sys/class/sec/tsp/cmd
+    chown system radio /sys/class/sec/tsp1/cmd
+    chmod 0664 /sys/class/sec/tsp1/cmd
+    chown system radio /sys/class/sec/tsp2/cmd
+    chmod 0664 /sys/class/sec/tsp2/cmd
 
 service vendor.touch-hal /vendor/bin/hw/vendor.lineage.touch-service.samsung-b5q
     class hal

@@ -6,7 +6,7 @@
 #pragma once
 
 #include <aidl/vendor/lineage/touch/BnTouchscreenGesture.h>
-#include <samsung_touch.h>
+#include "samsung_touch.h"
 #include <fstream>
 #include <map>
 

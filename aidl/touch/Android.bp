@@ -5,7 +5,6 @@
 
 cc_binary {
     name: "vendor.lineage.touch-service.samsung-b5q",
-    defaults: ["samsung_header_path_defaults"],
     init_rc: ["vendor.lineage.touch-service.samsung-b5q.rc"],
     relative_install_path: "hw",
     proprietary: true,
