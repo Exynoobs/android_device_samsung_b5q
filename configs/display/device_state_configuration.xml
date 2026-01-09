@@ -16,30 +16,24 @@
 
 <device-state-config>
   <!-- CLOSE configuration -->
-  <device-state>
-    <identifier>0</identifier>
-    <name>CLOSED</name>
-    <flags>
-      <flag>FLAG_CANCEL_OVERRIDE_REQUESTS</flag>
-    </flags>
-    <conditions>
-      <lid-switch>
-        <open>FALSE</open>
-      </lid-switch>
-      <sensor>
-        <type>com.samsung.sensor.folding_state</type>
-        <name>lid_angle_fusion  Wakeup</name>
-        <value>
-          <max-inclusive>0.9</max-inclusive>
-        </value>
-      </sensor>
-    </conditions>
-  </device-state>
+<device-state>
+  <identifier>0</identifier>
+  <name>CLOSE</name>
+  <conditions>
+    <sensor>
+      <type>com.samsung.sensor.folding_state</type>
+      <name>lid_angle_fusion  Wakeup</name>
+      <value>
+        <max-inclusive>0.9</max-inclusive>
+      </value>
+    </sensor>
+  </conditions>
+</device-state>
 
   <!-- HALF_FOLD configuration -->
   <device-state>
-    <identifier>1</identifier>
-    <name>HALF_OPENED</name>
+    <identifier>2</identifier>
+    <name>HALF_FOLDED</name>
     <conditions>
       <lid-switch>
         <open>TRUE</open>
@@ -57,8 +51,8 @@
 
   <!-- OPEN configuration -->
   <device-state>
-    <identifier>2</identifier>
-    <name>OPENED</name>
+    <identifier>3</identifier>
+    <name>OPEN</name>
     <conditions>
       <lid-switch>
         <open>TRUE</open>
@@ -71,14 +65,5 @@
         </value>
       </sensor>
     </conditions>
-  </device-state>
-
-  <!-- DUAL configuration -->
-  <device-state>
-    <identifier>3</identifier>
-    <name>REAR_DISPLAY_STATE</name>
-    <flags>
-      <flag>FLAG_EMULATED_ONLY</flag>
-    </flags>
   </device-state>
 </device-state-config>
