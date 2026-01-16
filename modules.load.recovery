@@ -29,6 +29,7 @@ pinctrl-kalama.ko
 pinctrl-spmi-gpio.ko
 pinctrl-spmi-mpp.ko
 pwm-qti-lpg.ko
+pwm-gpclk.ko
 pci-msm-drv.ko
 lcd.ko
 clk-qcom.ko
