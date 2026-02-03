@@ -1,0 +1,5 @@
+# Bluetooth
+bluetooth.device.default_name=Galaxy Z Flip 5
+
+# USB
+vendor.usb.product_string=Galaxy Z Flip 5
