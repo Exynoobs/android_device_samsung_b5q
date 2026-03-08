@@ -201,6 +201,8 @@ synaptics_ts_spi.ko
 synaptics_ts_i2c.ko
 fingerprint.ko
 fingerprint_sysfs.ko
+tfa9878_sysfs_dlkm.ko
+tfa9878_dlkm.ko
 input_booster_lkm.ko
 pca9482_charger.ko
 max77705_vibrator.ko
@@ -268,8 +270,6 @@ msm_video.ko
 cnss_prealloc.ko
 lpass_cdc_va_macro_dlkm.ko
 msm_kgsl.ko
-tfa9878_sysfs_dlkm.ko
-tfa9878_dlkm.ko
 wcd937x_slave_dlkm.ko
 camera.ko
 msm-eva.ko
