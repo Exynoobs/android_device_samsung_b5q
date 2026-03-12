@@ -1764,15 +1764,15 @@
          the format [System DeviceState]:[WM Jetpack Posture], for example: "0:1". -->
     <array name="config_device_state_postures">
         <item>0:1</item>
-        <item>1:2</item>
-        <item>2:3</item>
-        <item>3:1</item>
+        <item>2:2</item>
+        <item>3:3</item>
     </array>
 
     <!-- The device states (supplied by DeviceStateManager) that should be treated as open by the
          device fold controller. Default is empty. -->
     <integer-array name="config_openDeviceStates">
         <item>2</item>
+        <item>3</item>
     </integer-array>
 
     <!-- The device states (supplied by DeviceStateManager) that should be treated as folded by the
@@ -1784,14 +1784,14 @@
     <!-- The device states (supplied by DeviceStateManager) that should be treated as half-folded by
      the display fold controller. Default is empty. -->
     <integer-array name="config_halfFoldedDeviceStates">
-        <item>1</item>
+        <item>2</item>
     </integer-array>
 
     <!-- When a device enters any of these states, it should be woken up. States are defined in
          device_state_configuration.xml. -->
     <integer-array name="config_deviceStatesOnWhichToWakeUp">
-        <item>1</item>
         <item>2</item>
+        <item>3</item>
     </integer-array>
 
     <!-- When a device enters any of these states, it should go to sleep. States are defined in
