@@ -38,6 +38,7 @@ $(call soong_config_set_bool,bootanimation,multidisplay,true)
 PRODUCT_PACKAGES += \
     FrameworksResB5q \
     LineageResB5q \
+    SettingsProviderResB5q \
     SystemUIResB5q \
     WifiResTargetB5q
 
