@@ -22,6 +22,7 @@ PRODUCT_COPY_FILES += \
 # Init
 PRODUCT_PACKAGES += \
     init.b5q.rc
+
 # Power
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -39,7 +40,7 @@ PRODUCT_PACKAGES += \
 
 # Touch features
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch-service.samsung-b5q
+    vendor.lineage.touch-service.samsung-foldable
 
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \

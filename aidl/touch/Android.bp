@@ -4,8 +4,8 @@
 //
 
 cc_binary {
-    name: "vendor.lineage.touch-service.samsung-b5q",
-    init_rc: ["vendor.lineage.touch-service.samsung-b5q.rc"],
+    name: "vendor.lineage.touch-service.samsung-foldable",
+    init_rc: ["vendor.lineage.touch-service.samsung-foldable.rc"],
     relative_install_path: "hw",
     proprietary: true,
     srcs: [
