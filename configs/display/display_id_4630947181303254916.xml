@@ -22,7 +22,7 @@
         <density>
             <width>720</width>
             <height>748</height>
-            <density>240</density>
+            <density>200</density>
         </density>
     </densityMapping>
 </displayConfiguration>
