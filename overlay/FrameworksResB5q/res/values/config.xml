@@ -23,9 +23,12 @@
         <item>com.google.sensor.touch_gesture</item> <!-- OPENED -->
       </string-array>
 
-    <string name="config_mainBuiltInDisplayCutout">M 0,0 H -11.83333333333333 V 31.33333333333333 H 11.83333333333333 V 0 H 0 Z @dp</string>
-    <string name="config_subBuiltInDisplayCutout">\@bottom @right M 0,0 H -173.6470588235294 V -31.05882352941176 H 0 V 0 Z @dp</string>
-	<!-- Indicate whether to allow the device to suspend when the screen is off
+    <string name="config_mainBuiltInDisplayCutout">@bottom @right M 0,0 H -745 V -67 H 0 V 0 Z</string>
+    <bool name="config_maskMainBuiltInDisplayCutout">true</bool>
+
+    <string name="config_secondaryBuiltInDisplayCutout">M 0,0 H -11.83333333333333 V 31.33333333333333 H 11.83333333333333 V 0 H 0 Z @dp</string>
+
+    <!-- Indicate whether to allow the device to suspend when the screen is off
          due to the proximity sensor.  This resource should only be set to true
          if the sensor HAL correctly handles the proximity sensor as a wake-up source.
          Otherwise, the device may fail to wake out of suspend reliably.
