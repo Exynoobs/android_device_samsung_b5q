@@ -10,11 +10,103 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-
 <displayConfiguration>
     <name>Inner Display</name>
-    <autoBrightness enabled="true">
-    </autoBrightness>
+
+    <screenBrightnessMap>
+        <point>
+            <value>0.0</value>
+            <nits>1</nits>
+        </point>
+        <point>
+            <value>0.015686</value>
+            <nits>10.39</nits>
+        </point>
+        <point>
+            <value>0.041830</value>
+            <nits>34.6</nits>
+        </point>
+        <point>
+            <value>0.083660</value>
+            <nits>83.72</nits>
+        </point>
+        <point>
+            <value>0.167320</value>
+            <nits>204.69</nits>
+        </point>
+        <point>
+            <value>0.250980</value>
+            <nits>346.06</nits>
+        </point>
+        <point>
+            <value>0.333333</value>
+            <nits>500</nits>
+        </point>
+        <point>
+            <value>0.522876</value>
+            <nits>784</nits>
+        </point>
+        <point>
+            <value>0.666667</value>
+            <nits>1000</nits>
+        </point>
+        <point>
+            <value>0.800000</value>
+            <nits>1200</nits>
+        </point>
+        <point>
+            <value>1.0</value>
+            <nits>1500</nits>
+        </point>
+    </screenBrightnessMap>
+
+    <highBrightnessMode enabled="true">
+        <transitionPoint>0.333333</transitionPoint>
+        <minimumLux>3000</minimumLux>
+        <timing>
+            <timeWindowSecs>0</timeWindowSecs>
+            <timeMaxSecs>0</timeMaxSecs>
+            <timeMinSecs>0</timeMinSecs>
+        </timing>
+        <sdrHdrRatioMap>
+            <point>
+                <sdrNits>1.0</sdrNits>
+                <hdrRatio>1.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>2.0</sdrNits>
+                <hdrRatio>2.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>80.0</sdrNits>
+                <hdrRatio>4.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>100.0</sdrNits>
+                <hdrRatio>5.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>300.0</sdrNits>
+                <hdrRatio>5.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>500.0</sdrNits>
+                <hdrRatio>3.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>1500.0</sdrNits>
+                <hdrRatio>1.0</hdrRatio>
+            </point>
+        </sdrHdrRatioMap>
+    </highBrightnessMode>
+
+    <autoBrightness enabled="true" />
+
+    <lightSensor>
+        <type>android.sensor.light</type>
+        <name>Light  Non-wakeup</name>
+    </lightSensor>
+
     <densityMapping>
         <density>
             <width>1080</width>
