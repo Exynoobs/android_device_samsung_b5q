@@ -42,6 +42,7 @@ $(call soong_config_set_bool,bootanimation,multidisplay,true)
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResB5q \
+    Launcher3ResB5q \
     LineageResB5q \
     SettingsProviderResB5q \
     SystemUIResB5q \
