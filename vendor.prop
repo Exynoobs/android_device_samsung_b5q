@@ -7,3 +7,6 @@ ro.surface_flinger.secondary_display_orientation=ORIENTATION_90
 
 # Radio
 ro.radio.noril=no
+
+# Sensors
+ro.vendor.sensors.device_orientation_workaround=swap_upright_when_folded
