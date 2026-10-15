@@ -21,7 +21,6 @@ bool GloveMode::isSupported() {
         }
         file1.close();
     }
-    return false;
     std::ifstream file2(TSP2_CMD_LIST_NODE);
     if (file2.is_open()) {
         std::string line;
@@ -34,20 +33,7 @@ bool GloveMode::isSupported() {
 }
 
 ndk::ScopedAStatus GloveMode::getEnabled(bool* _aidl_return) {
-    std::ifstream file1(TSP1_CMD_RESULT_NODE);
-    if (file1.is_open()) {
-        std::string line;
-        getline(file1, line);
-        *_aidl_return = !line.compare("glove_mode,1:OK");
-        file1.close();
-    }
-    std::ifstream file2(TSP2_CMD_RESULT_NODE);
-    if (file2.is_open()) {
-        std::string line;
-        getline(file2, line);
-        *_aidl_return = !line.compare("glove_mode,1:OK");
-        file2.close();
-    }
+    *_aidl_return = mEnabled;
     return ndk::ScopedAStatus::ok();
 }
 
@@ -58,6 +44,7 @@ ndk::ScopedAStatus GloveMode::setEnabled(bool enabled) {
     std::ofstream file2(TSP2_CMD_NODE);
     file2 << "glove_mode," << (enabled ? "1" : "0");
     file2.close();
+    mEnabled = enabled;
 
     return ndk::ScopedAStatus::ok();
 }

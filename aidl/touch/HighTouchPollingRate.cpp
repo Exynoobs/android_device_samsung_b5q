@@ -12,35 +12,45 @@ namespace vendor {
 namespace lineage {
 namespace touch {
 
+static const char* const kTspCmdListNodes[] = {TSP1_CMD_LIST_NODE, TSP2_CMD_LIST_NODE};
+static const char* const kTspCmdNodes[] = {TSP1_CMD_NODE, TSP2_CMD_NODE};
+
+HighTouchPollingRate::HighTouchPollingRate() {
+    for (int i = 0; i < 2; i++) {
+        std::ifstream file(kTspCmdListNodes[i]);
+        std::string line;
+        bool hasGameMode = false, hasScanRate = false;
+        while (getline(file, line)) {
+            if (!line.compare("set_game_mode")) hasGameMode = true;
+            if (!line.compare("set_scan_rate")) hasScanRate = true;
+        }
+        mTspSupported[i] = hasGameMode && hasScanRate;
+    }
+}
+
 bool HighTouchPollingRate::isSupported() {
-    return !mHtprCmd.empty();
+    return mTspSupported[0] || mTspSupported[1];
 }
 
 ndk::ScopedAStatus HighTouchPollingRate::getEnabled(bool* _aidl_return) {
-    std::ifstream file1(TSP1_CMD_RESULT_NODE);
-    if (file1.is_open()) {
-        std::string line;
-        getline(file1, line);
-        *_aidl_return = !line.compare(mHtprCmd + ",1:OK");
-        file1.close();
-    }
-    std::ifstream file2(TSP2_CMD_RESULT_NODE);
-    if (file2.is_open()) {
-        std::string line;
-        getline(file2, line);
-        *_aidl_return = !line.compare(mHtprCmd + ",1:OK");
-        file2.close();
-    }
+    *_aidl_return = mEnabled;
     return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus HighTouchPollingRate::setEnabled(bool enabled) {
-    std::ofstream file1(TSP1_CMD_NODE);
-    file1 << (mHtprCmd + ",") << (enabled ? "1" : "0");
-    file1.close();
-    std::ofstream file2(TSP2_CMD_NODE);
-    file2 << (mHtprCmd + ",") << (enabled ? "1" : "0");
-    file2.close();
+    for (int i = 0; i < 2; i++) {
+        if (!mTspSupported[i]) continue;
+        std::ofstream file(kTspCmdNodes[i]);
+        file << "set_game_mode," << (enabled ? "1" : "0");
+        file.close();
+        // Game mode only raises the report rate once a scan rate has been set.
+        if (enabled) {
+            file.open(kTspCmdNodes[i]);
+            file << "set_scan_rate,1";
+            file.close();
+        }
+    }
+    mEnabled = enabled;
 
     return ndk::ScopedAStatus::ok();
 }

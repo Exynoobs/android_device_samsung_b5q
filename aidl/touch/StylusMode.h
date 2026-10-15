@@ -19,6 +19,9 @@ class StylusMode : public BnStylusMode {
 
     ndk::ScopedAStatus getEnabled(bool* _aidl_return) override;
     ndk::ScopedAStatus setEnabled(bool enabled) override;
+
+  private:
+    bool mEnabled = false;
 };
 
 }  // namespace touch
