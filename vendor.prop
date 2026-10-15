@@ -1,6 +1,6 @@
 # Fingerprint
 ro.vendor.fingerprint.type=side
-ro.vendor.fingerprint.sensor_location=930|780|250|local:4630946592180194435;740|230|250|local:4630947181303254916
+ro.vendor.fingerprint.sensor_location=930|790|110|local:4630946592180194435;730|130|80|local:4630947181303254916
 
 # Outer display
 ro.surface_flinger.secondary_display_orientation=ORIENTATION_90
