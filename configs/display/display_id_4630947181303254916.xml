@@ -115,7 +115,7 @@
         <density>
             <width>720</width>
             <height>748</height>
-            <density>200</density>
+            <density>300</density>
         </density>
     </densityMapping>
 </displayConfiguration>
