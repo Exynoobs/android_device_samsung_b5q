@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- The outer display uses the portrait shade layout, which needs the portrait spacing. -->
+    <dimen name="large_screen_shade_header_height">44dp</dimen>
+    <dimen name="qs_brightness_margin_top">8dp</dimen>
+    <dimen name="qs_panel_padding">22dp</dimen>
+    <dimen name="qs_panel_padding_top">40dp</dimen>
+</resources>

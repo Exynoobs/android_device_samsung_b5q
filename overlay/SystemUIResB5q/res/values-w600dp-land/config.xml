@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <bool name="config_use_large_screen_shade_header">true</bool>
+    <bool name="force_config_use_split_notification_shade">true</bool>
+    <integer name="quick_settings_infinite_grid_num_columns">8</integer>
+    <integer name="quick_settings_paginated_grid_num_rows">2</integer>
+</resources>
