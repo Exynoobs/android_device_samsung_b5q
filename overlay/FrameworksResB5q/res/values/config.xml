@@ -23,8 +23,7 @@
         <item>com.google.sensor.touch_gesture</item> <!-- OPENED -->
       </string-array>
 
-    <string name="config_mainBuiltInDisplayCutout">@bottom @right M 0,0 H -745 V -67 H 0 V 0 Z</string>
-    <bool name="config_maskMainBuiltInDisplayCutout">true</bool>
+    <string name="config_mainBuiltInDisplayCutout">@bottom @right M 0,0 H -173.6470588235294 V -31.05882352941176 H 0 V 0 Z @dp</string>
 
     <string name="config_secondaryBuiltInDisplayCutout">M 0,0 H -11.83333333333333 V 31.33333333333333 H 11.83333333333333 V 0 H 0 Z @dp</string>
 
