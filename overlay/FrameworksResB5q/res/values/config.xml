@@ -14,6 +14,10 @@
     <!-- Whether to show Fold lock behavior setting feature in Settings App -->
     <bool name="config_fold_lock_behavior">true</bool>
 
+    <!-- The folder hall IC reports folding as a lid switch. Folding already puts the device
+         to sleep through the device state, and lid sleep would skip doze. -->
+    <bool name="config_lidControlsSleep">false</bool>
+
     <!-- Type of the ambient tap sensor per device posture (defined by WM Jetpack posture).
         Unspecified values use config_dozeTapSensor -->
     <string-array name="config_dozeTapSensorPostureMapping" translatable="false">
