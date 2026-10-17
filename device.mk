@@ -22,7 +22,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/device_state_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/devicestate/device_state_configuration.xml \
     $(LOCAL_PATH)/configs/display/display_id_4630946592180194435.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946592180194435.xml \
     $(LOCAL_PATH)/configs/display/display_id_4630947181303254916.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947181303254916.xml \
-    $(LOCAL_PATH)/configs/display/display_layout_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_layout_configuration.xml
+    $(LOCAL_PATH)/configs/display/display_layout_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_layout_configuration.xml \
+    $(LOCAL_PATH)/configs/display/display_settings.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display_settings.xml
 
 # Init
 PRODUCT_PACKAGES += \

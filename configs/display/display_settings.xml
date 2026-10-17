@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--
+    SPDX-FileCopyrightText: 2026 The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<display-settings>
+    <config identifier="0" />
+    <!-- Letterbox fixed orientation apps on the outer screen instead of rotating it. -->
+    <display
+        name="local:4630947181303254916"
+        ignoreOrientationRequest="true" />
+</display-settings>
