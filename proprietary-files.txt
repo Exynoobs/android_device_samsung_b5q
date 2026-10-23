@@ -296,6 +296,7 @@ vendor/firmware/a740_zap.mdt
 vendor/firmware/gmu_gen70200.bin
 
 # Media
+vendor/etc/media_profiles_V1_0.xml
 vendor/lib64/libqc2audio_hwaudiocodec.so
 
 # NFC
